@@ -1,0 +1,20 @@
+{% extends 'index.html' %} {% block content %} you submitted = {{name}} {{email}} {{phone}} {{disc}}
+
+<form action="/table" method='post'> {% csrf_token %}
+    <div>
+        <lable>Schema Name :</lable>
+        <input type="text" name='schemaname' placeholder="schema name">
+    </div>
+    <div>
+        <lable>Table Name :</lable>
+        <input type="text" name='tabname' placeholder="table name">
+    </div>
+    <div>
+        <lable>Number of columns :</lable>
+        <input type="text" name='numofcol' placeholder="Number of Column">
+    </div>
+
+    <input type='submit' value='save' />
+</form>
+
+{% endblock %}

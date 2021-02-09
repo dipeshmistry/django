@@ -1,0 +1,22 @@
+{% extends 'index.html' %} {% block content %}
+
+<form action="/Contactus" method='post'> {% csrf_token %}
+    <div>
+        <lable>Name :</lable>
+        <input type="text" name='name' placeholder="name">
+    </div>
+    <div>
+        <lable>Email Address:</lable>
+        <input type="email" name='email' placeholder="name@example.com">
+    </div>
+    <div>
+        <lable>Phone Number:</lable>
+        <input type="phone" name='phone' placeholder="your nuber">
+    </div>
+    <div>
+        <lable>Description:</lable>
+        <input type="desc" name='desc' placeholder="desc">
+    </div>
+    <input type='submit' value='save' />
+</form>
+{% endblock %}
