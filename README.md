@@ -1,0 +1,2 @@
+# django
+create table dynamically
